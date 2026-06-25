@@ -11,13 +11,13 @@ on:
 permissions:
   id-token: write   # This is required for requesting the JWT
   contents: read    # This is required for actions/checkout
-  
+
 jobs:
   listing_buckets:
     runs-on: ubuntu-latest
     steps:
       - name: setup aws credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ secrets.IAM_ROLE }} 
           aws-region: ${{ secrets.AWS_REGION }}
