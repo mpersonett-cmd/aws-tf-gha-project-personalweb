@@ -19,7 +19,7 @@ jobs:
       - name : checkout repo
         uses: actions/checkout@v7
 
-      -  name: setup aws credentials
+      - name: setup aws credentials
         uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ secrets.IAM_ROLE }} 
