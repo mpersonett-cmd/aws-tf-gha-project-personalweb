@@ -35,7 +35,8 @@ jobs:
       - name: terraform plan
         env:
           BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
-        run: terraform plan \
+        run: |
+          terraform plan \
               -var "bucketname=${BUCKET_NAME}"
         working-directory: terraform
 
