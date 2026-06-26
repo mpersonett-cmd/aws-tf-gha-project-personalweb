@@ -43,5 +43,5 @@ jobs:
       - name: terraform apply
         env:
           TF_VAR_bucket_name: ${{ secrets.BUCKET_NAME }}
-        run: terraform apply -auto-approve tfplan
+        run: terraform apply -auto-approve
         working-directory: ./terraform
